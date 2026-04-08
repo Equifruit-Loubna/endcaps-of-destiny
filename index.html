@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="startScreen">
+<h1>ENDCAPS OF DESTINY</h1>
+<button onclick="startGame()">GENERATE YOUR GAMERTAG</button>
+</div>
+
+<div id="game" class="hidden">
+
+<audio id="music" src="assets/music.wav" loop></audio>
+<audio id="clickSound" src="assets/collect.wav"></audio>
+
+<div class="overlay">
+
+<h2 class="title">SO… WHAT KIND OF PLAYER ARE YOU?</h2>
+
+<div class="buttons">
+
+<div onclick="generate()" class="card">
+<img src="assets/assassin.png">
+<button class="label">Assassin</button>
+<p class="desc">Silent but deadly. Your endcaps sell before anyone notices.</p>
+</div>
+
+<div onclick="generate()" class="card">
+<img src="assets/bulldozer.png">
+<button class="label">Bulldozer</button>
+<p class="desc">You move volume like a force of nature. Banana domination mode.</p>
+</div>
+
+<div onclick="generate()" class="card">
+<img src="assets/curious.png">
+<button class="label">Curious</button>
+<p class="desc">Always testing, always learning. The Fairtrade future starts here.</p>
+</div>
+
+<div onclick="generate()" class="card">
+<img src="assets/nerd.png">
+<button class="label">Nerd</button>
+<p class="desc">Data is your superpower. You optimize every banana move.</p>
+</div>
+
+</div>
+
+<div id="loading" class="hidden">Generating...</div>
+
+<div id="result" class="hidden">
+<h3 class="gamertitle">YOUR GAMERTAG</h3>
+<div id="tag"></div>
+<button class="share" onclick="share()">Share on LinkedIn</button>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

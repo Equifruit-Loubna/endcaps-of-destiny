@@ -1,0 +1,165 @@
+@font-face{font-family:Claudia;src:url('./assets/Claudia.otf');}
+@font-face{font-family:Retor;src:url('./assets/Retor-Bold.otf');font-weight:bold;}
+
+body{
+margin:0;
+background:url('./assets/hero.png') no-repeat center center fixed;
+background-size:cover;
+font-family:'Retor';
+color:#fbbb20;
+text-align:center;
+}
+
+#startScreen{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,0.75);
+}
+
+#startScreen h1{font-family:Claudia;font-size:48px;}
+
+#startScreen button{
+font-family:Claudia;
+font-size:26px;
+padding:20px 40px;
+background:#fbbb20;
+cursor:pointer;
+transition:0.2s;
+}
+#startScreen button:hover{
+box-shadow:0 0 20px #fbbb20;
+transform:scale(1.05);
+}
+
+.overlay{
+background:linear-gradient(to bottom,
+rgba(0,0,0,0.75) 0%,
+rgba(0,0,0,0.6) 40%,
+rgba(0,0,0,0.2) 80%,
+rgba(0,0,0,0.05) 100%);
+min-height:100vh;
+
+padding-top: clamp(260px, 28vh, 420px);
+
+}
+
+.title{
+font-family:Claudia;
+font-size:56px;
+margin-bottom:60px;
+}
+
+.buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:50px;
+}
+
+.card{
+display:flex;
+flex-direction:column;
+align-items:center;
+width:260px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+}
+
+.card img{
+width:200px;
+margin-bottom:30px;
+transition:0.2s;
+}
+.card:hover img{
+transform:scale(1.1);
+filter:drop-shadow(0 0 15px #fbbb20);
+}
+
+.label{
+font-family:'Retor';
+font-size:32px;
+padding:18px 28px;
+background:#fbbb20;
+margin-bottom:15px;
+}
+.label:hover{
+box-shadow:0 0 15px #fbbb20;
+}
+
+.desc{
+font-size:20px;
+text-align:center;
+}
+
+#tag{
+font-size:44px;
+color:#f08050;
+margin:20px;
+background:#2e2624;
+padding:10px 20px;
+display:inline-block;
+}
+
+.gamertitle{
+font-family:Claudia;
+font-size:54px;
+}
+
+.share{
+background:#94cde9;
+font-family:'Retor';
+font-size:30px;
+padding:20px 40px;
+cursor:pointer;
+}
+.share:hover{
+box-shadow:0 0 20px #94cde9;
+transform:scale(1.05);
+}
+
+.hidden{display:none;}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .overlay {
+    padding-top: 220px;
+  }
+
+  .title {
+    font-size: 32px;
+    padding: 0 20px;
+  }
+
+  .card img {
+    width: 140px;
+  }
+
+  .label {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  #tag {
+    font-size: 28px;
+  }
+
+  .gamertitle {
+    font-size: 32px;
+  }
+
+  .share {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+}
