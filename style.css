@@ -131,6 +131,25 @@ cursor:pointer;
 box-shadow:0 0 20px #94cde9;
 transform:scale(1.05);
 }
+.retry{
+background:#f08050; /* Equifruit yellow */
+color:#2e2624; /* dark brown */
+font-family:'Retor';
+font-size:26px;
+padding:18px 36px;
+cursor:pointer;
+border:none;
+border-radius:6px;
+margin-bottom:25px;
+
+/* ✨ game feel */
+transition:0.2s;
+}
+
+.retry:hover{
+box-shadow:0 0 20px #fbbb20;
+transform:scale(1.05);
+}
 
 .hidden{display:none;}
 
@@ -169,6 +188,11 @@ transform:scale(1.05);
   .share {
     font-size: 20px;
     padding: 12px 20px;
+  }
+
+  .retry{
+font-size:18px;
+padding:12px 20px;
   }
 }
 .copy-msg{
