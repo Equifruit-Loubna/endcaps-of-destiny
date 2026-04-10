@@ -15,16 +15,37 @@ let tag=tags[Math.floor(Math.random()*tags.length)]+Math.floor(Math.random()*999
 document.getElementById("tag").innerText=tag;
 document.getElementById("loading").classList.add("hidden");
 document.getElementById("result").classList.remove("hidden");
+document.getElementById("result").scrollIntoView({
+  behavior: "smooth",
+  block: "center"
+});
 },800);
 }
 
 function share(){
-let tag=document.getElementById("tag").innerText;
 
-let text=`I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 Think you can beat me at #CPMA2026?`;
+  let tag = document.getElementById("tag").innerText;
 
-navigator.clipboard.writeText(text);
+  let text = `I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 Think you can beat me at #CPMA2026?`;
 
-let url="https://www.linkedin.com/feed/?shareActive=true&text="+encodeURIComponent(text);
-window.open(url,"_blank");
+  navigator.clipboard.writeText(text).then(() => {
+
+    // 👉 SHOW MESSAGE
+    let msg = document.getElementById("copyMsg");
+    msg.style.display = "block";
+
+    setTimeout(()=>{
+      msg.style.display = "none";
+    },5000);
+
+    // 👉 OPEN LINKEDIN (slight delay for UX)
+    setTimeout(()=>{
+      let url = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href);
+      window.open(url, "_blank");
+    }, 5000);
+
+  }).catch(() => {
+    console.log("Copy failed");
+  });
+
 }
