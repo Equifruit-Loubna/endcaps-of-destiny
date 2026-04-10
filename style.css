@@ -96,6 +96,14 @@ box-shadow:0 0 15px #fbbb20;
 .desc{
 font-size:20px;
 text-align:center;
+
+color:#ffffff;
+
+background:rgba(46,38,0,0.85);
+padding:12px 14px;
+border-radius:8px;
+
+text-shadow:0 2px 8px rgba(0,0,0,1);
 }
 
 #tag{
@@ -162,4 +170,21 @@ transform:scale(1.05);
     font-size: 20px;
     padding: 12px 20px;
   }
+}
+.copy-msg{
+position:fixed;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+background:#2e2624;
+color:#fff;
+padding:18px 28px;
+border-radius:10px;
+font-size:20px;
+font-weight:bold; 
+z-index:9999;
+opacity:0.95;
+box-shadow:0 6px 20px rgba(0,0,0,0.5);
+text-align:center;
+max-width:90%;
 }
