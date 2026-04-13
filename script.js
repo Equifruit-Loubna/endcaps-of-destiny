@@ -109,7 +109,7 @@ if(!isMobile){
   text = `I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 Think you can beat me at #CPMA2026 — come prove it at Equifruit Booth #638. 🔥 👉🏼Generate your gamertag here: https://equifruit-bananas.github.io/endcaps-of-destiny/`;
 } else {
   // 📱 Mobile → NO link (LinkedIn adds it automatically)
-  text = `I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 Think you can beat me at #CPMA2026 — come prove it at Equifruit Booth #638.🔥👉🏼Generate your gamertag below!`; 
+  text = `👉🏼 I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 Think you can beat me at #CPMA2026 — come prove it at Equifruit Booth #638.🔥👉🏼Generate your gamertag below!`; 
 }
 
   let url;
