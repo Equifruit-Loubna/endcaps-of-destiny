@@ -96,12 +96,21 @@ function share(){
 
   let tag = document.getElementById("tag").innerText;
 
-  // ✅ ADD LINK TO CAPTION
-  let text = `I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 Think you can beat me at #CPMA2026?\n\nPlay here 👉 ${window.location.href}`;
 
   let msg = document.getElementById("copyMsg");
 
   let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  // ✅ ADD LINK TO CAPTION
+  let text;
+
+if(!isMobile){
+  // 💻 Desktop → include link
+  text = ` I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 https://equifruit-bananas.github.io/endcaps-of-destiny/ 👉 Think you can beat me at #CPMA2026?`;
+} else {
+  // 📱 Mobile → NO link (LinkedIn adds it automatically)
+  text = `I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 Think you can beat me at #CPMA2026?`;
+}
 
   let url;
 
