@@ -98,35 +98,48 @@ function share(){
 
   let text = `I got my Endcaps of Destiny gamertag: "${tag}" 🎮🍌 Think you can beat me at #CPMA2026?`;
 
+  let msg = document.getElementById("copyMsg");
+
   // detect mobile
   let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   let url;
 
-  // 💻 DESKTOP → try prefill
   if(!isMobile){
     url = "https://www.linkedin.com/feed/?shareActive=true&text=" + encodeURIComponent(text);
-  } 
-  // 📱 MOBILE → fallback
-  else{
+  } else {
     url = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href);
   }
 
-  // 🚀 OPEN LINKEDIN IMMEDIATELY (KEY CHANGE)
-  window.open(url, "_blank");
+  // ✅ COPY FIRST (critical for mobile)
+  navigator.clipboard.writeText(text).then(() => {
 
-  // copy in background
-  navigator.clipboard.writeText(text);
+    msg.innerText = "Caption copied. Paste it on your LinkedIn 👇";
+    msg.style.display = "block";
 
-  // 👉 SHOW MESSAGE on your page
-  let msg = document.getElementById("copyMsg");
-  msg.innerText = "Caption copied. Paste it on your LinkedIn 👇";
-  msg.style.display = "block";
+    // open after short delay
+    setTimeout(()=>{
+      window.open(url, "_blank");
+    }, 300);
 
-  // hide after
-  setTimeout(()=>{
-    msg.style.display = "none";
-  }, 4000);
+    setTimeout(()=>{
+      msg.style.display = "none";
+    }, 4000);
+
+  }).catch(() => {
+
+    // 🔴 FALLBACK (very important for mobile)
+    msg.innerText = "Copy failed — long press to copy 👇";
+    msg.style.display = "block";
+
+    // fallback: show text in prompt
+    window.prompt("Copy your caption:", text);
+
+    setTimeout(()=>{
+      window.open(url, "_blank");
+    }, 800);
+
+  });
 
 }
 
