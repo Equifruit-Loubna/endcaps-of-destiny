@@ -151,7 +151,53 @@ box-shadow:0 0 20px #fbbb20;
 transform:scale(1.05);
 }
 
+
 .hidden{display:none;}
+
+.share-incentive{
+  font-size:40px; /* 👈 bigger */
+  font-weight:bold;
+  color:#fbbb20;
+  margin:20px 0 10px;
+  line-height:1.2;
+}
+
+.share-incentive-sub{
+  font-size:16px;
+  color:#ffffff;
+  margin-bottom:20px;
+}
+.share-box{
+  background: rgba(46,38,36,0.85);
+  padding: 25px;
+  border-radius: 12px;
+  display: block;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.share-instruction{
+  font-size:18px;
+  color:#ffffff;
+  margin:10px 0 15px;
+  opacity:0.9;
+}
+
+.tag-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+#tag{
+  margin:0;
+}
+
+.retry{
+  margin:0;
+}
 
 
 /* Mobile adjustments */
@@ -194,6 +240,36 @@ transform:scale(1.05);
 font-size:18px;
 padding:12px 20px;
   }
+
+  .share-incentive{
+  font-size:22px;
+  font-weight:bold;
+  color:#fbbb20;
+  margin:20px 0 10px;
+}
+
+.share-incentive-sub{
+  font-size:14px;
+  color:#ffffff;
+  margin-bottom:20px;
+}
+
+.share-instruction{
+  font-size:14px;
+  margin:10px 0;
+}
+
+.share-box{
+  width:90%;
+  padding:20px;
+}
+
+
+.tag-row{
+  flex-direction:column;
+  gap:10px;
+}
+
 }
 .copy-msg{
 position:fixed;
