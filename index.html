@@ -57,33 +57,43 @@ You win with facts, impact, and serious banana knowledge.</p>
 
 <div id="result" class="hidden">
 
-
-
 <div class="share-box">
-  <h3 class="gamertitle">YOUR GAMERTAG</h3>
-  <div class="tag-row">
-    <div id="tag"></div>
-    <button class="retry" onclick="regenerate()">Spin again</button>
+
+  <!-- 🎮 TOP (NO background) -->
+  <div class="tag-section">
+    <h3 class="gamertitle">YOUR GAMERTAG</h3>
+
+    <div class="tag-row">
+      <div id="tag"></div>
+      <button class="retry" onclick="regenerate()">Spin again</button>
+    </div>
   </div>
 
-  <p class="share-incentive">
-    Share your gamertag on LinkedIn for a chance to win a $50 gift card*
-  </p>
+  <!-- 📣 BOTTOM (WITH background) -->
+  <div class="share-content">
 
-  <p class="share-incentive-sub">
-    *Valid at any retailer carrying Equifruit bananas. Winner announced after CPMA.
-  </p>
-  <p class="share-instruction">
- Tap “Share on LinkedIn”, then paste your caption
-</p>
+    <p class="share-incentive">
+      Share your gamertag on LinkedIn for a chance to win a $50 gift card*
+    </p>
 
-  <button class="share" onclick="share()">Share on LinkedIn</button>
+    <p class="share-incentive-sub">
+      *Valid at any retailer carrying Equifruit bananas. Winner announced after CPMA.
+    </p>
+
+    <p class="share-instruction">
+      👇 Tap “Share” → paste your caption → post
+    </p>
+
+    <button class="share" onclick="share()">Share on LinkedIn</button>
+
+  </div>
 
 </div>
 
 <div id="copyMsg" class="copy-msg" style="display:none;">
   Caption copied! Paste it in your LinkedIn post 👇
 </div>
+
 
 </div>
 
