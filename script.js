@@ -169,7 +169,7 @@ if(!currentType) return;
 // pick from SAME player type
 let list = gamertags[currentType];
 let base = list[Math.floor(Math.random() * list.length)];
-let tag = base + Math.floor(Math.random()*999);
+let tag = base + Math.floor(Math.random()*100000);
 
 // update UI
 document.getElementById("tag").innerText = tag;
